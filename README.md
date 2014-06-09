@@ -3,7 +3,7 @@ About
 
 __This Meteor smart package provides you with a reactive loader for public* Vimeo videos.__
 
-Specify an array of video IDs you want to get, and when they're all returned from the Vimeo API, your template will automatically update with the data. Just use `getVideos()` method. See example below.
+Specify an array of video IDs you want to get, and when they're all returned from the Vimeo API, your template will automatically update with the data. Just use the `getVideos()` method. See example below.
 
 _* I would love to support public and private videos. Please contribute if possible!_
 
