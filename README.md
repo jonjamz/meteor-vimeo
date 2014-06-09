@@ -24,7 +24,7 @@ var myVideos = new Vimeo([
 ]);
 ```
 
-Create a template for showing your videos. We're using some custom classes and Font Awesome classes here.
+Create a template for showing your videos. I'm using some custom classes and Font Awesome classes here. You'll need to style it how you want.
 
 ```html
 <template name="videoList">
@@ -37,15 +37,41 @@ Create a template for showing your videos. We're using some custom classes and F
     {{/each}}
   {{/if}}
 
+  {{#with activeVideo}}
+    <div class="overlay">
+      <button class="close single-icon"><i class="fa fa-times"></i></button>
+      <iframe
+        src="{{src}}"
+        width="500"
+        height="281"
+        frameborder="0"
+        webkitallowfullscreen
+        mozallowfullscreen
+        allowfullscreen>
+      </iframe>
+    </div>
+  {{/with}}
+
 </template>
 ```
 
-Finally, get the data in a template helper.
+Finally, add template helpers and events. I'm using a session variable to hold the active video's data.
 
 ```javascript
+Session.set('activeVideo', null);
+
 Template.videoList.helpers({
   videos: function () {
     return myVideos.getVideos();
+  },
+  activeVideo: function () {
+    return Session.get('activeVideo');
+  }
+});
+
+Template.videoList.events({
+  'click .video': function () {
+    Session.set('activeVideo', this);
   }
 });
 ```
