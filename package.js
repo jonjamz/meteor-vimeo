@@ -4,7 +4,7 @@ Package.describe({
 
 Package.on_use(function (api, where) {
   api.use(["deps", "check"], ["client"]);
-  api.export && api.export('ReactiveObject');
+  api.export && api.export('Vimeo');
   api.add_files('vimeo.js', ['client']);
 });
 
