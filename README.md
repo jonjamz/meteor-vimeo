@@ -32,7 +32,7 @@ var myVideos = new Vimeo([
 
 Create a template for showing your videos. We're using some custom classes and Font Awesome classes here.
 
-```handlebars
+```html
 <template name="videoList">
 
   {{#if videos}}
