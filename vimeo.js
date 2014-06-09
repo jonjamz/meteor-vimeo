@@ -1,5 +1,3 @@
-var Vimeo;
-
 Vimeo = function(arrayOfVideoIds, callback) {
   var getAndAddMetaData, id, runCallbackIfDone, self, _i, _len;
   self = this;
