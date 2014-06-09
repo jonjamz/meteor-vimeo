@@ -30,6 +30,22 @@ var myVideos = new Vimeo([
 ]);
 ```
 
+Create a template for showing your videos. We're using some custom classes and Font Awesome classes here.
+
+```handlebars
+<template name="videoList">
+
+  {{#if videos}}
+    {{#each videos}}
+      <a class="video" href="#" style="background-image: url({{preview}})">
+        <button class="play-video-button"><i class="fa fa-play"></i></button>
+      </a>
+    {{/each}}
+  {{/if}}
+
+</template>
+```
+
 Finally, get the data in a template helper.
 
 ```javascript
