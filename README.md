@@ -19,14 +19,8 @@ Then, somewhere, specify the videos to load.
 ```javascript
 // Set up videos
 var myVideos = new Vimeo([
-  "93517849",
-  "93525318",
-  "93525316",
-  "93519766",
-  "93519764",
-  "93517850",
-  "93517845",
-  "93517848"
+  "97129318",
+  "97174655"
 ]);
 ```
 
