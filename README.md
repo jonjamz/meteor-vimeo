@@ -49,7 +49,7 @@ Create a template for showing your videos. I'm using some custom classes and Fon
         mozallowfullscreen
         allowfullscreen>
       </iframe>
-      <p>{{summary}}</p>
+      <p>{{{summary}}}</p>
     </div>
   {{/with}}
 
