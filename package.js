@@ -3,7 +3,7 @@ Package.describe({
 });
 
 Package.on_use(function (api, where) {
-  api.use(["deps", "check"], ["client"]);
+  api.use(["deps", "check", "http"], ["client"]);
   api.export && api.export('Vimeo');
   api.add_files('vimeo.js', ['client']);
 });
