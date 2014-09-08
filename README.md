@@ -77,6 +77,15 @@ Template.videoList.events({
 });
 ```
 
+The following attributes are available in the returned video helper:
+
+  ```
+  {{preview}} - Thumbnail preview of the video
+  {{src}} - Vimeo URL to the video
+  {{summary}} - The video's "Description" field on Vimeo
+  {{title}} - The video's title
+  ```
+
 Contribute
 ----------
 

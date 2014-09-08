@@ -35,7 +35,8 @@ Vimeo = function(arrayOfVideoIds, callback) {
         self.videos.push({
           preview: res.data[0].thumbnail_large,
           src: "//player.vimeo.com/video/" + id,
-          summary: res.data[0].description
+          summary: res.data[0].description,
+          title: res.data[0].title
         });
         self._done++;
         return runCallbackIfDone();
