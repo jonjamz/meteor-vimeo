@@ -27,12 +27,12 @@ Vimeo = function(arrayOfVideoIds, callback) {
       return self._dep.changed();
     }
   };
-  getAndAddMetaData = function(id) {
+  getAndAddMetaData = function(id,idx) {
     return HTTP.get("http://vimeo.com/api/v2/video/" + id + ".json", function(err, res) {
       if ((err != null) && ((typeof console !== "undefined" && console !== null ? console.error : void 0) != null)) {
         return console.error(err);
       } else {
-        self.videos.push({
+        self.videos.splice(idx,0,{
           preview: res.data[0].thumbnail_large,
           src: "//player.vimeo.com/video/" + id,
           summary: res.data[0].description,
@@ -45,7 +45,7 @@ Vimeo = function(arrayOfVideoIds, callback) {
   };
   for (_i = 0, _len = arrayOfVideoIds.length; _i < _len; _i++) {
     id = arrayOfVideoIds[_i];
-    getAndAddMetaData(id);
+    getAndAddMetaData(id,_i);
   }
   return void 0;
 };
