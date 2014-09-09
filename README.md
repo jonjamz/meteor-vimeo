@@ -24,6 +24,7 @@ var myVideos = new Vimeo([
 ]);
 ```
 
+
 Create a template for showing your videos. I'm using some custom classes and Font Awesome classes here. You'll need to style it how you want.
 
 ```html
@@ -85,6 +86,27 @@ The following attributes are available in the returned video helper:
   {{summary}} - The video's "Description" field on Vimeo
   {{title}} - The video's title
   ```
+
+Callbacks
+----------
+You can also specify a callback function to run once the Vimeo data has loaded. For example, you may want to load your video data in a route and set a session variable before it is rendered.
+
+```javascript
+this.route('videos', {
+        path: '/videos',
+        onBeforeAction: function(pause) {
+            // Set up videos
+            myVideos = new Vimeo([
+                "105564454",
+                "105564698"
+            ], function(){
+                Session.set('activeVideo', myVideos.getVideos()[0]);
+            });
+        }
+    });
+});
+```
+
 
 Contribute
 ----------
