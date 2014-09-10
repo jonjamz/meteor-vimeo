@@ -28,7 +28,7 @@ Vimeo = function(arrayOfVideoIds, callback) {
     }
   };
   getAndAddMetaData = function(id,idx) {
-    return HTTP.get("http://vimeo.com/api/v2/video/" + id + ".json", function(err, res) {
+    return HTTP.get("//vimeo.com/api/v2/video/" + id + ".json", function(err, res) {
       if ((err != null) && ((typeof console !== "undefined" && console !== null ? console.error : void 0) != null)) {
         return console.error(err);
       } else {
