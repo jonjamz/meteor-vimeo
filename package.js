@@ -6,6 +6,7 @@ Package.describe({
 });
 
 Package.onUse(function (api, where) {
+  api.versionsFrom('METEOR@0.9.1');
   api.use(["deps", "check", "http"], ["client"]);
   api.export && api.export('Vimeo');
   api.addFiles('vimeo.js', ['client']);
