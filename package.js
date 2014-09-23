@@ -1,15 +1,17 @@
 Package.describe({
-  summary: "Easily get videos from the Vimeo API, with Deps support for loading"
+  summary: "Easily get videos from the Vimeo API, with Deps support for loading",
+  version: "0.1.2",
+  name: "vimeo",
+  git: "https://github.com/jonjamz/meteor-vimeo"
 });
 
-Package.on_use(function (api, where) {
+Package.onUse(function (api, where) {
   api.use(["deps", "check", "http"], ["client"]);
   api.export && api.export('Vimeo');
-  api.add_files('vimeo.js', ['client']);
+  api.addFiles('vimeo.js', ['client']);
 });
 
-Package.on_test(function (api) {
+Package.onTest(function (api) {
   api.use('vimeo');
-
-  api.add_files('vimeo_tests.js', ['client', 'server']);
+  api.addFiles('vimeo_tests.js', ['client', 'server']);
 });
