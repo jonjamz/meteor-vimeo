@@ -12,7 +12,7 @@ How to use
 
 First, install the package from Atmosphere.
 
-`mrt add vimeo`
+`meteor add mrt:vimeo`
 
 Then, somewhere, specify the videos to load.
 

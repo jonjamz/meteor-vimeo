@@ -1,7 +1,7 @@
 Package.describe({
   summary: "Easily get videos from the Vimeo API, with Deps support for loading",
   version: "0.1.2",
-  name: "vimeo",
+  name: "mrt:vimeo",
   git: "https://github.com/jonjamz/meteor-vimeo"
 });
 
@@ -13,6 +13,6 @@ Package.onUse(function (api, where) {
 });
 
 Package.onTest(function (api) {
-  api.use('vimeo');
+  api.use('mrt:vimeo');
   api.addFiles('vimeo_tests.js', ['client', 'server']);
 });

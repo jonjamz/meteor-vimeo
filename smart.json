@@ -3,7 +3,7 @@
   "description": "Easily get videos from the Vimeo API, with Deps support for loading",
   "homepage": "https://github.com/jonjamz/meteor-vimeo",
   "author": "Jonathan James",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "git": "https://github.com/jonjamz/meteor-vimeo",
   "packages": {}
 }
